@@ -1,5 +1,7 @@
 nav {
+  text-align: center;
   border: thin solid black;
+  background-color: yellow;
 }
 
 div {
