@@ -18,6 +18,11 @@ h1{
   text-align: center;
 }
 
+p{
+  font-size: 18px;
+  text-align: left;
+}
+
 .basictext{
   display: inline-block;
   font-size: 18px;
