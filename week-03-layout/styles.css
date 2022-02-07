@@ -1,7 +1,11 @@
+body{
+  background-color: #dedcd7
+}
+
 nav {
   text-align: center;
-  border: thin solid black;
-  background-color: yellow;
+  border: thin solid #91908d;
+  background-color: #bab9b5;
 }
 
 div {
