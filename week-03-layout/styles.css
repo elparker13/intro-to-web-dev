@@ -9,10 +9,17 @@ nav {
 }
 
 div {
-  border: thin solid black;
+  border: thin solid #91908d;
   margin: 25px 0;
 }
 
-footer {
-  border: thin solid black;
+h1{
+  font-size: 20px;
+  text-align: center;
+}
+
+.basictext{
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
 }
