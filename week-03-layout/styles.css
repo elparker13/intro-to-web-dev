@@ -19,7 +19,7 @@ div {
   justify-content: center;
 }
 
-.container{
+.border{
   display: flex;
   justify-content: center;
   background-color: #a8a8a7;
