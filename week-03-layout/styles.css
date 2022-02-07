@@ -15,11 +15,32 @@ nav {
 
 div {
   border: thin solid #91908d;
-  margin: 25px 0;
+  padding: 20px;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  background-color: #a8a8a7;
+}
+
+.content1{
+  display: flex;
+  background-color: #bababa;
+}
+
+.content2{
+  display: flex;
+  background-color: #d6d6d6;
 }
 
 h1{
   font-size: 20px;
+  text-align: center;
+}
+
+h3{
   text-align: center;
 }
 
