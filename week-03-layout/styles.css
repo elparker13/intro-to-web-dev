@@ -22,6 +22,7 @@ div {
 .container{
   width: 90%;
   margin: 2rem auto;
+  background-color: #d9d9d9;
 }
 
 .grid{
@@ -29,6 +30,7 @@ div {
   grid-template-columns:repeat(7, 1fr);
   grid-template-rows: repeat(10, 5vw);
   grid-gap: 15px;
+  background-color: #e6e6e6;
 }
 
 .gallery__img{
