@@ -1,20 +1,11 @@
+let yourName = prompt('Enter your name:');
+let occupation = prompt('Enter an occupation:');
+let salary = prompt('Enter a number between 20 and 100:');
+let yourExp = prompt('Enter a saying or expression:');
+let verb = prompt('Enter an action verb not ending in ING:');
+let adjective = prompt('Enter an adjective:');
+let pluralNoun = prompt('Enter a plural noun:');
 
-// When this function is called, it takes the values from the inputs and adds
-// them to the outputs.
-function fillOutputs() {
-
-  // Get the adjective input element
-  const adjectiveOneInput = document.getElementById('adjective-one-input');
-  // Get the text from the input element
-  const adjectiveOne = adjectiveOneInput.value;
-
-  // Get the adjective output element
-  const adjectiveOneOutput = document.getElementById('adjective-one-output');
-  // Set the text of the input element
-  adjectiveOneOutput.innerText = adjectiveOne;
-
-  // Get the output container element
-  const outputDiv = document.getElementById('output');
-  // Make the output container element visible
-  outputDiv.style.display = 'block';
-}
+document.write(yourName + 'just got offered an new job as a' + occupation
++ 'making' + salary + 'thousand dollars per week.' + yourExp + 'you say! Your new job
+requires you to' + verb + 'and make' + adjective + pluralNoun.)

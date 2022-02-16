@@ -1,8 +1,10 @@
-#output {
-  /* Output starts invisible */
-  display: none;
+body{
+
+  margin: 10%;
+  background-color: lightblue;
+  font-family: times;
 }
 
-#adjective-one-output {
-  font-weight: bold;
+h1{
+  text-align: center;
 }
