@@ -1,3 +1,5 @@
+document.getElementById('h1').style.color = 'darkblue';
+
 let yourName = prompt('Enter your name:');
 let occupation = prompt('Enter an occupation:');
 let salary = prompt('Enter a number between 20 and 100:');
