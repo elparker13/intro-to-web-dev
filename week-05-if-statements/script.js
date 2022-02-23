@@ -42,12 +42,27 @@ function submitAnswerThree() {
   }
 }
 
+function submitAnswerFour() {
+  const answerFourInput = document.getElementById('answer-four-input');
+  const answerFour = answerFourInput.value;
+
+  if(answerFour == '6') {
+    alert("That's right!");
+    hide('question-four');
+    show('done');
+  } else if(answerFour < '6') {
+    alert('The answer is higher and an even number.');
+  } else if(answerFour > '6') {
+    alert('The answer is lower and and one less than most peoples lucky number.');
+  }
+}
+
+
 
 function show(id) {
   const element = document.getElementById(id);
   element.style.display = 'block';
 }
-
 
 function hide(id) {
   const element = document.getElementById(id);

@@ -6,6 +6,10 @@
   display: none;
 }
 
+#question-four{
+  display: none;
+}
+
 #done {
   display: none;
 }
@@ -19,4 +23,8 @@ button{
   font-size: 15px;
 }
 
+h1
+
 h2
+
+h3
