@@ -1,48 +1,54 @@
-// When this function is called, it takes the user's answer to the first
-// question and uses if statements to check whether it's correct.
+
 function submitAnswerOne() {
-  // Get answer one's input element
   const answerOneInput = document.getElementById('answer-one-input');
-  // Get the text from answer one's input element
   const answerOne = answerOneInput.value;
 
-  if(answerOne == 'cat') {
+  if(answerOne == 'Massachusetts') {
     alert("That's right!");
     hide('question-one');
     show('question-two');
-  } else if(answerOne == 'dog') {
-    alert('Close, but my favorite animal runs away from dogs.');
   } else {
-    alert('Wrong! Hint: My favorite animal meows.')
+    alert('Wrong! Hint: the capital of this state is Boston.');
   }
 }
 
-// When this function is called, it takes the user's answer to the second
-// question and uses if statements to check whether it's correct.
 function submitAnswerTwo() {
-  // Get answer two's input element
   const answerTwoInput = document.getElementById('answer-two-input');
-  // Get the number from answer two's input element
   const answerTwo = answerTwoInput.value;
 
-  if(answerTwo == 42) {
+  if(answerTwo == 'Mint Chocolate Chip') {
     alert("That's right!");
     hide('question-two');
-    show('done');
-  } else if(answerTwo < 42) {
-    alert('The answer is higher.');
+    show('question-three');
+  } else if(answerTwo == 'Cookie Dough') {
+    alert('A classic, but mine has more chocolate chips than cookie dough.');
+  } else if(answerTwo == 'Chocolate Chip') {
+    alert('Very close! Add a well known GREEN flavor to it.');
   } else {
-    alert('The answer is lower.')
+    alert('The letter abreviation of this ice cream is M.C.C.')
   }
 }
 
-// Helper function that takes an ID and shows the element with that ID.
+function submitAnswerThree() {
+  const answerThreeInput = document.getElementById('answer-three-input');
+  const answerThree = answerThreeInput.value;
+
+  if(answerThree == 'True') {
+    alert("That's right!");
+    hide('question-three');
+    show('question-four');
+  } else {
+    alert('Wrong! Had a 50/50 shot. Try the other answer!');
+  }
+}
+
+
 function show(id) {
   const element = document.getElementById(id);
   element.style.display = 'block';
 }
 
-// Helper  function that takes an ID and hides the element with that ID.
+
 function hide(id) {
   const element = document.getElementById(id);
   element.style.display = 'none';

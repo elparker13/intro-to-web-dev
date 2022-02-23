@@ -2,6 +2,21 @@
   display: none;
 }
 
+#question-three{
+  display: none;
+}
+
 #done {
   display: none;
 }
+
+button{
+  height: 25px;
+  width: 60px;
+  background: teal;
+  color: black;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+h2
