@@ -1,17 +1,30 @@
+body{
+  background-color: #c2c2c2;
+}
+
+#question-one{
+  text-align: center;
+  background-color: #f2b76f;
+}
+
 #question-two {
   display: none;
+  text-align: center;
 }
 
 #question-three{
   display: none;
+  text-align: center;
 }
 
 #question-four{
   display: none;
+  text-align: center;
 }
 
 #done {
   display: none;
+  text-align: center;
 }
 
 button{
@@ -23,8 +36,12 @@ button{
   font-size: 15px;
 }
 
-h1
+h1{
+  text-align: center;
+}
 
 h2
 
 h3
+
+p
