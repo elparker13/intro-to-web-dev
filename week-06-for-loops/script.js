@@ -4,7 +4,7 @@ Clarke: What do you want?
 Lexa: To explain.
 Clarke: There's no need. I get it, I bear it so they don't have to again.
 Lexa: Such a curious species. You've added so much to us already. I'm glad to been wrong about you.
-Clarke: Wait. Does that mean...you are here to take me with you?
+Clarke: Wait. Does that mean you are here to take me with you?
 Lexa: No. You can never join us, Clarke. Your actions must have a cost.
 Clarke: Just me? Am I the only human being who has ever sinned?
 Lexa: Of course not, but you are the only test subject from any species anywhere in the universe since the dawn of time who committed murder during a test.
@@ -20,15 +20,28 @@ const speechPunctuationRemoved = speech.replace(',', '').replace('.', '').replac
 
 const wordsArray = speechPunctuationRemoved.split(/\s+/);
 
+function displayShortWords(){
+  const shortWordsElement = document.getElementById('short-words');
+
+  for(let i = 0; i < wordsArray.length; i++){
+    const word = wordsArray[i];
+
+    if(word.length < 4){
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      shortWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
+
 
 function displayLongWords() {
   const longWordsElement = document.getElementById('long-words');
 
-  // Loop over every word in the array.
   for(let i = 0; i < wordsArray.length; i++) {
     const word = wordsArray[i];
-    // If the word has more than 5 characters, display it in the page.
-    if(word.length > 5) {
+    if(word.length > 8) {
       const wordElement = document.createElement('li');
       wordElement.innerText = word;
       longWordsElement.appendChild(wordElement);
@@ -36,12 +49,12 @@ function displayLongWords() {
   }
 }
 
-// TODO: Define your own functions here!
 
 function displaySpeechStats() {
   document.getElementById('speech').innerText = speech;
 
+  displayShortWords();
+
   displayLongWords();
 
-  // TODO: Call your functions here!
 }
