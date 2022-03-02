@@ -13,13 +13,13 @@ Lexa: Madi knew you would say that.
 Clarke: Madi is with you?
 Lexa: In a matter of speaking, yes. Her consciousness has joined ours. She is at peace. She will never feel pain, she will never die. She knew that living here without anyone her own age to love is something you wouldn't have wanted for her, even if it meant you being alone. I suppose that choice was made easier with the realization you wouldn't be.
 Clarke: Transcendence is a choice? You can choose to come back?
-Lexa: Of course, though until now no one ever had. There won't be offspring, and they won't join us when they die. None of them seem to care. A curious species indeed.
-*Clarke runs towards her friends and hugs Raven, Murphy, Emori, Octavia, Echo, Jackson, Hope, and Niylah*`;
+Lexa: Of course, though until now no one ever had. There won't be offspring, and they won't join us when they die. None of them seem to care. A curious species indeed.`;
 
 
 const speechPunctuationRemoved = speech.replace(',', '').replace('.', '').replace('?', '').replace(':', '');
 
 const wordsArray = speechPunctuationRemoved.split(/\s+/);
+
 
 function displayShortWords(){
   const shortWordsElement = document.getElementById('short-words');
@@ -34,6 +34,7 @@ function displayShortWords(){
     }
   }
 }
+
 
 function displayLetterEWords(){
   const letterWordsElement = document.getElementById('letter-words');
@@ -53,7 +54,7 @@ function displayLongWords() {
 
   for(let i = 0; i < wordsArray.length; i++) {
     const word = wordsArray[i];
-    
+
     if(word.length > 8) {
       const wordElement = document.createElement('li');
       wordElement.innerText = word;
@@ -61,6 +62,7 @@ function displayLongWords() {
     }
   }
 }
+
 
 function displayThirdWords(){
   const thirdWordsElement = document.getElementById('third-words');
