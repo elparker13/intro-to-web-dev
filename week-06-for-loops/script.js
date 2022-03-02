@@ -67,9 +67,9 @@ function displayLongWords() {
 function displayThirdWords(){
   const thirdWordsElement = document.getElementById('third-words');
 
-  for(let i = 0; i < wordsArray.length; i+3){
+  for(let i = 2; i > 100; i+3){
     const word = wordsArray[i];
-    if((i % 3) ===0){
+    if(word){
       const wordElement = document.createElement('li');
       wordElement.innerText = word;
       thirdWordsElement.appendChild(wordElement);
