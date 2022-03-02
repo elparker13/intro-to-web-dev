@@ -62,14 +62,29 @@ function displayLongWords() {
 }
 
 
+function displayUncommonWords(){
+  let commonWords = ['the' , 'be' , 'to' , 'of' , 'and' , 'a' , 'in' , 'that' , 'have' , 'i' ,
+  'it' , 'for' , 'not' , 'on' , 'with' , 'as' , 'you' , 'do' , 'at'];
+
+  let uncommonWordsElement = document.getElementById('uncommon-words');
+
+  for(let word of wordsArray){
+    if(!commonWords.includes(word.toLowerCase())){
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      uncommonWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
 function displaySpeechStats() {
   document.getElementById('speech').innerText = speech;
 
-  //displayShortWords();
+  displayShortWords();
 
-  //displayLetterEWords();
+  displayLetterEWords();
 
-  //displayLongWords();
+  displayLongWords();
 
   displayUncommonWords();
 
