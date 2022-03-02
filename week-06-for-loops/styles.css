@@ -1,3 +1,30 @@
 ul{
   columns: 5;
+  background-color: #759c78;
+}
+
+body{
+  padding: 30px;
+  background-image: url(The100.jpg);
+}
+
+p{
+  font-size: 15px;
+  font-weight: bold;
+  background: #759c78;
+}
+
+h1{
+  text-align: center;
+  background-color: #5b6e17;
+}
+
+h2{
+  text-align: center;
+  background-color: #5b6e17;
+}
+
+h3{
+  text-align: center;
+  background-color: #5b6e17;
 }
