@@ -16,6 +16,7 @@ Clarke: Transcendence is a choice? You can choose to come back?
 Lexa: Of course, though until now no one ever had. There won't be offspring, and they won't join us when they die. None of them seem to care. A curious species indeed.
 *Clarke runs towards her friends and hugs Raven, Murphy, Emori, Octavia, Echo, Jackson, Hope, and Niylah*`;
 
+
 const speechPunctuationRemoved = speech.replace(',', '').replace('.', '').replace('?', '').replace(':', '');
 
 const wordsArray = speechPunctuationRemoved.split(/\s+/);
@@ -34,6 +35,17 @@ function displayShortWords(){
   }
 }
 
+function displayLetterEWords(){
+  const letterWordsElement = document.getElementById('letter-words');
+
+  for(let word of wordsArray){
+    if(word.startsWith('e')){
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      letterWordsElement.appendChild(wordElement);
+    }
+  }
+}
 
 
 function displayLongWords() {
@@ -53,8 +65,12 @@ function displayLongWords() {
 function displaySpeechStats() {
   document.getElementById('speech').innerText = speech;
 
-  displayShortWords();
+  //displayShortWords();
 
-  displayLongWords();
+  //displayLetterEWords();
+
+  //displayLongWords();
+
+  displayUncommonWords();
 
 }
