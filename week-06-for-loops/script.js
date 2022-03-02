@@ -67,7 +67,7 @@ function displayLongWords() {
 function displayThirdWords(){
   const thirdWordsElement = document.getElementById('third-words');
 
-  for(let i = 2; i > 100; i+3){
+  for(let i = 2; i <= 300; i += 3){
     const word = wordsArray[i];
     if(word){
       const wordElement = document.createElement('li');
@@ -101,6 +101,8 @@ function displaySpeechStats() {
   displayLetterEWords();
 
   displayLongWords();
+
+  displayThirdWords();
 
   displayUncommonWords();
 
