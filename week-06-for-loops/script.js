@@ -53,10 +53,24 @@ function displayLongWords() {
 
   for(let i = 0; i < wordsArray.length; i++) {
     const word = wordsArray[i];
+    
     if(word.length > 8) {
       const wordElement = document.createElement('li');
       wordElement.innerText = word;
       longWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
+function displayThirdWords(){
+  const thirdWordsElement = document.getElementById('third-words');
+
+  for(let i = 0; i < wordsArray.length; i+3){
+    const word = wordsArray[i];
+    if((i % 3) ===0){
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      thirdWordsElement.appendChild(wordElement);
     }
   }
 }
