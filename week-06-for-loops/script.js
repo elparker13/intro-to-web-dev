@@ -64,6 +64,22 @@ function displayLongWords() {
 }
 
 
+function displayLongestWord(){
+  const longestWordElement = document.getElementById('longest-word');
+
+  let longestWord = wordsArray[0];
+
+  for(let i = 1; i < wordsArray.length; i++){
+    if(wordsArray[i].length > longestWord.length){
+      longestWord = wordsArray[i];
+    }
+  }
+  const wordElement = document.createElement('li');
+  wordElement.innerText = longestWord;
+  longestWordElement.appendChild(wordElement);
+}
+
+
 function displayThirdWords(){
   const thirdWordsElement = document.getElementById('third-words');
 
@@ -101,6 +117,8 @@ function displaySpeechStats() {
   displayLetterEWords();
 
   displayLongWords();
+
+  displayLongestWord();
 
   displayThirdWords();
 
