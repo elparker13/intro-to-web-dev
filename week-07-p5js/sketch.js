@@ -1,6 +1,3 @@
-let x = 75;
-let sunSpeed = 1;
-
 function setup() {
   createCanvas(600, 600);
   background(155, 186, 189);
@@ -8,7 +5,7 @@ function setup() {
  //sun
 noStroke();
   fill(242, 198, 51);
-  ellipse(x, 150, 100, 100);
+  ellipse(75, 150, 100, 100);
 
  //Initial Mountains
   fill(220)
@@ -20,7 +17,6 @@ noStroke();
   triangle(300, 400, 500, 400, 400, 200);
 }
 
-
 function draw() {
 
   //mountains
@@ -30,6 +26,7 @@ function draw() {
   if(mouseIsPressed){
   line(mouseX, y, mouseX, mouseY);
  }
+
 
 //water
 fill(34, 155, 191);
