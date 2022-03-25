@@ -1,16 +1,16 @@
 // Array of objects representing a todo list.
 // Modify this array to contain your own list.
 const mountainArray = [
-  {name: 'Mount Elbert', elevation: 14.440, distance: 5.5},
-  {name: 'Mount Massive', elevation: 14.428, distance: 6.8},
-  {name: 'Mount Harvard', elevation: 14.421, distance: 7.0},
-  {name: 'Blanca Peak', elevation: 14.351, distance: 9.6},
-  {name: 'La Plata Peak', elevation: 14.343, distance: 4.75},
-  {name: 'Uncompahgre Peak', elevation: 14.321, distance: 3.5},
-  {name: 'Crestone Peak', elevation: 14.300, distance: 7.0},
-  {name: 'Mount Lincoln', elevation: 14.293, distance: 2.75},
-  {name: 'Castle Peak', elevation: 14.279, distance: 3.0},
-  {name: 'Grays Peak', elevation: 14.278, distance: 3.5},
+  {name: 'Mount Elbert', elevation: 14440, distance: 5.5},
+  {name: 'Mount Massive', elevation: 14428, distance: 6.8},
+  {name: 'Mount Harvard', elevation: 14421, distance: 7.0},
+  {name: 'Blanca Peak', elevation: 14351, distance: 9.6},
+  {name: 'La Plata Peak', elevation: 14343, distance: 4.75},
+  {name: 'Uncompahgre Peak', elevation: 14321, distance: 3.5},
+  {name: 'Crestone Peak', elevation: 14300, distance: 7.0},
+  {name: 'Mount Lincoln', elevation: 14293, distance: 2.75},
+  {name: 'Castle Peak', elevation: 14279, distance: 3.0},
+  {name: 'Grays Peak', elevation: 14278, distance: 3.5},
 ];
 
 // Loads the content into the page.
@@ -43,8 +43,8 @@ function loadTable() {
   const headerRowElement = document.createElement('tr');
   headerRowElement.appendChild(createElement('th', 'Index'));
   headerRowElement.appendChild(createElement('th', 'Name'));
-  headerRowElement.appendChild(createElement('th', 'Elevation'));
-  headerRowElement.appendChild(createElement('th', 'Distance'));
+  headerRowElement.appendChild(createElement('th', 'Elevation(ft.)'));
+  headerRowElement.appendChild(createElement('th', 'Distance(mi.)'));
   tableElement.appendChild(headerRowElement);
 
   // Iterate over the array and create a table row for each object.
