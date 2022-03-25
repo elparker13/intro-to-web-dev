@@ -1,27 +1,23 @@
 // Array of objects representing a todo list.
 // Modify this array to contain your own list.
-const mountainsArray = [
-  {title: 'Why We Sleep', pages: 368, author: 'Mathew Walker' },
-  {title: 'The Happiness Project', pages:343, author: 'Gretchen Rubin'},
-  {title: 'How to Win Friends and Influence People', pages:291, author: 'Dale Carnegie'},
-  {title: 'Checklist Manifesto', pages:208, author: 'Atul Gawande'},
-  {title: 'Running for My Life', pages:240, author:'Lopez Lomong' },
-  {title: 'Into Thin Air', pages:332, author: 'Jon Krakauer' },
-  {title: 'Subtle Art of Not Giving a F*ck', pages:224, author: 'Mark Manson' },
-  {title: 'Everything is F*cked', pages: 288, author: 'Mark Manson' },
-  {title: 'Rich Dad, Poor Dad', pages: 195, author: 'Robert Kiyosaki' },
-  {title: 'Rich Woman', pages:274, author: 'Kim Kiyosaki' },
-  {title: 'Millionaire Next Door', pages:258, author: 'Thomas Stanley' },
-  {title: 'The Cancer Diaries', pages:200, author: 'David Farmer' },
-
-
+const mountainArray = [
+  {name: 'Mount Elbert', elevation: 14.440, distance: 5.5},
+  {name: 'Mount Massive', elevation: 14.428, distance: 6.8},
+  {name: 'Mount Harvard', elevation: 14.421, distance: 7.0},
+  {name: 'Blanca Peak', elevation: 14.351, distance: 9.6},
+  {name: 'La Plata Peak', elevation: 14.343, distance: 4.75},
+  {name: 'Uncompahgre Peak', elevation: 14.321, distance: 3.5},
+  {name: 'Crestone Peak', elevation: 14.300, distance: 7.0},
+  {name: 'Mount Lincoln', elevation: 14.293, distance: 2.75},
+  {name: 'Castle Peak', elevation: 14.279, distance: 3.0},
+  {name: 'Grays Peak', elevation: 14.278, distance: 3.5},
 ];
 
 // Loads the content into the page.
 function loadContent() {
   // This line of code sorts the array alphabetically by the task labels.
   // Modify this to sort your data by a different field, or just delete it.
-  mountainsArray.sort((a, b) => compare(a.title, b.title));
+  mountainArray.sort((a, b) => compare(a.name, b.name));
 
   loadTable();
   loadSmallestMountain();
@@ -30,11 +26,11 @@ function loadContent() {
 
 // Adds a task to the array and reloads the page content.
 function addNewMountain() {
-  const newBookTitle = document.getElementById('title-input').value;
-  const newBookPages = document.getElementById('pages-input').value;
-  const newBookAuthor = document.getElementById('author-input').value;
-  const newBook = {title: newMountainTitle, pages: newMountainPages, author: newMountainAuthor};
-  mountainsArray.push(newMountain);
+  const newMountainName = document.getElementById('name-input').value;
+  const newMountainElevation = document.getElementById('elevation-input').value;
+  const newMountainDistance = document.getElementById('distance-input').value;
+  const newMountain = {name: newMountainName, elevation: newMountainElevation, distance: newMountainDistance};
+  mountainArray.push(newMountain);
 
   loadContent();
 }
