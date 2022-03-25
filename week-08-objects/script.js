@@ -42,19 +42,19 @@ function loadTable() {
   // Create a header row.
   const headerRowElement = document.createElement('tr');
   headerRowElement.appendChild(createElement('th', 'Index'));
-  headerRowElement.appendChild(createElement('th', 'Title'));
-  headerRowElement.appendChild(createElement('th', 'Pages'));
-  headerRowElement.appendChild(createElement('th', 'Author'));
+  headerRowElement.appendChild(createElement('th', 'Name'));
+  headerRowElement.appendChild(createElement('th', 'Elevation'));
+  headerRowElement.appendChild(createElement('th', 'Distance'));
   tableElement.appendChild(headerRowElement);
 
   // Iterate over the array and create a table row for each object.
-  for (let i = 0; i < mountainsArray.length; i++) {
-    const mountain = mountainsArray[i];
+  for (let i = 0; i < mountainArray.length; i++) {
+    const mountain = mountainArray[i];
     const rowElement = document.createElement('tr');
     rowElement.appendChild(createElement('td', i));
-    rowElement.appendChild(createElement('td', book.title));
-    rowElement.appendChild(createElement('td', book.pages));
-    rowElement.appendChild(createElement('td', book.author));
+    rowElement.appendChild(createElement('td', mountain.name));
+    rowElement.appendChild(createElement('td', mountain.elevation));
+    rowElement.appendChild(createElement('td', mountain.distance));
     tableElement.appendChild(rowElement);
   }
 
@@ -66,17 +66,17 @@ function loadTable() {
 // Displays the name of the shortest book.
 function loadSmallestMountain(){
   // Assume the first book is shortest
-  let smallestMountain = mountainsArray[0];
+  let smallestMountain = mountainArray[0];
 
   // Starting with the second book, look for a shorter book
-  for (let i = 0; i < mountainsArray.length; i++) {
-    const mountain = mountainsArray[i];
+  for (let i = 0; i < mountainArray.length; i++) {
+    const mountain = mountainArray[i];
     // If this book is shorter than the previous shortest, it's now the shortest
-    if(book.pages < smallestMountain.pages) {
-      smallestMountain = book;
+    if(mountain.elevation < smallestMountain.elevation) {
+      smallestMountain = mountain;
     }
   }
-  document.getElementById('smallest-mountain').innerText = smallestMountain.title;
+  document.getElementById('smallest-mountain').innerText = smallestMountain.name;
 }
 
 //average pages in the books//
