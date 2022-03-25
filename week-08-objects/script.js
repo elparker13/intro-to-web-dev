@@ -63,15 +63,15 @@ function loadTable() {
   tableContainer.appendChild(tableElement);
 }
 
-// Displays the name of the shortest book.
+// Displays the name of the smallest mountain.
 function loadSmallestMountain(){
-  // Assume the first book is shortest
+  // Assume the first mountain is smallest
   let smallestMountain = mountainArray[0];
 
-  // Starting with the second book, look for a shorter book
+  // Starting with the second mountain, look for a smallet mountain
   for (let i = 0; i < mountainArray.length; i++) {
     const mountain = mountainArray[i];
-    // If this book is shorter than the previous shortest, it's now the shortest
+    // If this mountain is smallet than the previous smallest, it's now the smallest
     if(mountain.elevation < smallestMountain.elevation) {
       smallestMountain = mountain;
     }
@@ -79,18 +79,18 @@ function loadSmallestMountain(){
   document.getElementById('smallest-mountain').innerText = smallestMountain.name;
 }
 
-//average pages in the books//
+//average distance of hike on the mountains//
 function loadAverage (){
   let total = 0;
- for(let i = 0; i < mountainsArray.length; i++){
+ for(let i = 0; i < mountainArray.length; i++){
     console.log (total)
-   const book = mountainsArray[i];
-    total += Number(book.pages);
+   const mountain = mountainArray[i];
+    total += Number(mountain.distance);
 
  }
-  let average = total / mountainsArray.length;
+  let average = total / mountainArray.length;
   console.log (average);
-  document.getElementById('average-pages').innerText = average
+  document.getElementById('average-distance').innerText = average
   }
 
 
