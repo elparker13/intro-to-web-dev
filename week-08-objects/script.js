@@ -1,27 +1,40 @@
 // Array of objects representing a todo list.
 // Modify this array to contain your own list.
-const taskArray = [
-  {label: 'Water plants', time: 3},
-  {label: 'Homework', time: 2},
-  {label: 'Laundry', time: 1},
+const mountainsArray = [
+  {title: 'Why We Sleep', pages: 368, author: 'Mathew Walker' },
+  {title: 'The Happiness Project', pages:343, author: 'Gretchen Rubin'},
+  {title: 'How to Win Friends and Influence People', pages:291, author: 'Dale Carnegie'},
+  {title: 'Checklist Manifesto', pages:208, author: 'Atul Gawande'},
+  {title: 'Running for My Life', pages:240, author:'Lopez Lomong' },
+  {title: 'Into Thin Air', pages:332, author: 'Jon Krakauer' },
+  {title: 'Subtle Art of Not Giving a F*ck', pages:224, author: 'Mark Manson' },
+  {title: 'Everything is F*cked', pages: 288, author: 'Mark Manson' },
+  {title: 'Rich Dad, Poor Dad', pages: 195, author: 'Robert Kiyosaki' },
+  {title: 'Rich Woman', pages:274, author: 'Kim Kiyosaki' },
+  {title: 'Millionaire Next Door', pages:258, author: 'Thomas Stanley' },
+  {title: 'The Cancer Diaries', pages:200, author: 'David Farmer' },
+
+
 ];
 
 // Loads the content into the page.
 function loadContent() {
   // This line of code sorts the array alphabetically by the task labels.
   // Modify this to sort your data by a different field, or just delete it.
-  taskArray.sort((a, b) => compare(a.label, b.label));
+  mountainsArray.sort((a, b) => compare(a.title, b.title));
 
   loadTable();
-  loadShortestTask();
+  loadSmallestMountain();
+  loadAverage ();
 }
 
 // Adds a task to the array and reloads the page content.
-function addNewTask() {
-  const newTaskLabel = document.getElementById('label-input').value;
-  const newTaskTime = document.getElementById('time-input').value;
-  const newTask = {label: newTaskLabel, time: newTaskTime };
-  taskArray.push(newTask);
+function addNewMountain() {
+  const newBookTitle = document.getElementById('title-input').value;
+  const newBookPages = document.getElementById('pages-input').value;
+  const newBookAuthor = document.getElementById('author-input').value;
+  const newBook = {title: newMountainTitle, pages: newMountainPages, author: newMountainAuthor};
+  mountainsArray.push(newMountain);
 
   loadContent();
 }
@@ -33,17 +46,19 @@ function loadTable() {
   // Create a header row.
   const headerRowElement = document.createElement('tr');
   headerRowElement.appendChild(createElement('th', 'Index'));
-  headerRowElement.appendChild(createElement('th', 'Label'));
-  headerRowElement.appendChild(createElement('th', 'Time'));
+  headerRowElement.appendChild(createElement('th', 'Title'));
+  headerRowElement.appendChild(createElement('th', 'Pages'));
+  headerRowElement.appendChild(createElement('th', 'Author'));
   tableElement.appendChild(headerRowElement);
 
   // Iterate over the array and create a table row for each object.
-  for (let i = 0; i < taskArray.length; i++) {
-    const task = taskArray[i];
+  for (let i = 0; i < mountainsArray.length; i++) {
+    const mountain = mountainsArray[i];
     const rowElement = document.createElement('tr');
     rowElement.appendChild(createElement('td', i));
-    rowElement.appendChild(createElement('td', task.label));
-    rowElement.appendChild(createElement('td', task.time));
+    rowElement.appendChild(createElement('td', book.title));
+    rowElement.appendChild(createElement('td', book.pages));
+    rowElement.appendChild(createElement('td', book.author));
     tableElement.appendChild(rowElement);
   }
 
@@ -52,21 +67,37 @@ function loadTable() {
   tableContainer.appendChild(tableElement);
 }
 
-// Displays the name of the shortest task.
-function loadShortestTask(){
-  // Assume the first task is shortest
-  let shortestTask = taskArray[0];
+// Displays the name of the shortest book.
+function loadSmallestMountain(){
+  // Assume the first book is shortest
+  let smallestMountain = mountainsArray[0];
 
-  // Starting with the second task, look for a shorter task
-  for (let i = 1; i < taskArray.length; i++) {
-    const task = taskArray[i];
-    // If this task is shorter than the previous shortest, it's now the shortest
-    if(task.time < shortestTask.time) {
-      shortestTask = task;
+  // Starting with the second book, look for a shorter book
+  for (let i = 0; i < mountainsArray.length; i++) {
+    const mountain = mountainsArray[i];
+    // If this book is shorter than the previous shortest, it's now the shortest
+    if(book.pages < smallestMountain.pages) {
+      smallestMountain = book;
     }
   }
-  document.getElementById('shortest-task').innerText = shortestTask.label;
+  document.getElementById('smallest-mountain').innerText = smallestMountain.title;
 }
+
+//average pages in the books//
+function loadAverage (){
+  let total = 0;
+ for(let i = 0; i < mountainsArray.length; i++){
+    console.log (total)
+   const book = mountainsArray[i];
+    total += Number(book.pages);
+
+ }
+  let average = total / mountainsArray.length;
+  console.log (average);
+  document.getElementById('average-pages').innerText = average
+  }
+
+
 
 // Helper function that creates an element that contains text content.
 function createElement(tag, text) {
