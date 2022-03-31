@@ -1,8 +1,53 @@
 #images {
-  width: 500px;
-  border: thin solid black;
+  width: 700px;
+  border: thin solid white;
 }
 
 #images img {
   width: 100px;
 }
+
+body{
+  background-color: #d64036;
+  }
+
+  #links {
+    color: white;
+  }
+
+  #languages {
+    color: white;
+  }
+
+  #externallink {
+    color: white;
+    font-size: 10px;
+  }
+
+h1 {
+  color: #fffafa;
+  text-shadow: 2px 2px #253db8;
+  text-align: center;
+  text-decoration: underline;
+}
+
+  h2 {
+    text-align: center;
+    color: #e8e827;
+    text-shadow: 1px 1px #253db8;
+    text-decoration: underline;
+  }
+
+  hr {
+    width: 80%;
+    text-align: center;
+    margin-left: 25px;
+  }
+
+  a {
+    color: white;
+  }
+
+  ul{
+    columns: 4;
+  }
