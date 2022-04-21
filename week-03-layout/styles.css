@@ -2,6 +2,10 @@ body{
   background-color: #dedcd7
 }
 
+a{
+  font-size: 30px;
+}
+
 @media screen and (max-width:600px)
   {
    body{ background-color: #f0dea8;}
@@ -30,7 +34,7 @@ div {
   grid-template-columns:repeat(7, 1fr);
   grid-template-rows: repeat(10, 5vw);
   grid-gap: 15px;
-  background-color: #e6e6e6;
+  background-color: white;
 }
 
 .gallery__img{
@@ -90,24 +94,10 @@ div {
 
 .content1{
   display: flex;
-  background-color: #bababa;
+  background-color: white;
 }
 
 .content2{
   display: flex;
-  background-color: #d6d6d6;
-}
-
-h1{
-  font-size: 20px;
-  text-align: center;
-}
-
-h3{
-  text-align: center;
-}
-
-p{
-  text-align: center;
-  font-size: 18px;
+  background-color: white;
 }
