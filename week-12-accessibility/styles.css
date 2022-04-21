@@ -97,17 +97,3 @@ div {
   display: flex;
   background-color: #d6d6d6;
 }
-
-h1{
-  font-size: 20px;
-  text-align: center;
-}
-
-h3{
-  text-align: center;
-}
-
-p{
-  text-align: center;
-  font-size: 18px;
-}
