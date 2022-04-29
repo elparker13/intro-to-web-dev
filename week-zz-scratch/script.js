@@ -76,7 +76,17 @@ function deleteKey(){
 }
 
 function submitGuess(){
+  const activeTiles = [...getActiveTiles()]
+  if(activeTiles.length !== WORD_LENGTH){
+    return
+  }
 
+  const guess = activeTiles.reduce((word, tile) => {
+    return word + tile.dataset.letter
+  }, "")
+
+  stopInteraction()
+  activeTiles.forEach((...params) => flipTile(...params, guess))
 }
 
 function getActiveTiles(){
