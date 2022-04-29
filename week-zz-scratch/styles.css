@@ -86,6 +86,7 @@ body{
   justify-content: center;
   align-items: center;
   user-select: none;
+  transition: transform 250ms linear;
 }
 
 .tile[data-state="active"]{
@@ -105,4 +106,8 @@ body{
 .tile[data-state="correct"]{
   border: none;
   background-color: hsl(115, 29%, 43%);
+}
+
+.tile.flip{
+  transform: rotateX(90deg);
 }
