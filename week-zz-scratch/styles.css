@@ -64,3 +64,16 @@ body{
   --saturation: 29%;
   --lightness: 43%;
 }
+
+.guess-grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 1;
+  grid-template-columns: repeat(5, 4em);
+  grid-template-rows: repeat(6, 4em);
+}
+
+.tile{
+  background-color: red;
+}
