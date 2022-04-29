@@ -98,7 +98,8 @@ function flipTile(tile, index, array, guess){
     tile.classList.add("flip")
   }, index * FLIP_ANIMATION_DURATION / 2)
 
-  tile.addEventListener("transitionend", () =>{
+  tile.addEventListener("transitionend",
+  () =>{
     tile.classList.remove("flip")
     if(targetWord[index] === letter){
       tile.dataset.state = "correct"
@@ -115,9 +116,9 @@ function flipTile(tile, index, array, guess){
       tile.addEventListener("transitionend", () =>{
         startInteraction()
         //checkWinLose(guess, array)
-      })
+      }, {once: true})
     }
-  })
+  }, {once: true})
 }
 
 function getActiveTiles(){
