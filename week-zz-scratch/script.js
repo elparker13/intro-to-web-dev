@@ -6,6 +6,7 @@ const dictionary = ["aahed",
 const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
+const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
 const offsetFromDate = new Date(2022, 3 , 1)
 const msOffset = Date.now() - offsetFromDate
@@ -125,4 +126,19 @@ function flipTile(tile, index, array, guess){
 
 function getActiveTiles(){
   return guessGrid.querySelectorAll('[data-state="active"]')
+}
+
+function showAlert(message, duration = 1000){
+  const alert = document.createElement("div")
+  alert.textContent = message
+  alert.classList.add("alert")
+  alertContainer.prepend(alert)
+  if(duration == null) return
+
+  setTimeout(() => {
+    alert.classList.add("hide")
+    alert.addEventListener("transitionend", () => {
+      alert.remove()
+    })
+  }, duration)
 }
