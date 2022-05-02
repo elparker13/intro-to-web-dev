@@ -141,3 +141,17 @@ function showAlert(message, duration = 1000){
     })
   }, duration)
 }
+
+function checkWinLose(guess, tiles){
+  if(guess === targetWord) {
+    showAlert("You Win", 5000)
+    stopInteraction()
+    return
+  }
+
+  const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])")
+  if(remainingTiles.length === 0) {
+    showAlert(targetWord.toUpperCase(), null)
+    stopInteraction()
+  }
+}
