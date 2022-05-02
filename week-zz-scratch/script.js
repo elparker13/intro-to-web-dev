@@ -80,6 +80,8 @@ function deleteKey(){
 function submitGuess(){
   const activeTiles = [...getActiveTiles()]
   if(activeTiles.length !== WORD_LENGTH){
+    showAlert("Not enough letters")
+    shakeTiles(activeTiles)
     return
   }
 
